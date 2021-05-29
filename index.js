@@ -14,9 +14,9 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
-//const CONNECTION_URL = 'mongodb+srv://marloncoreas:8HNu4e4Th2HjhsT@cluster0.tqtrt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-//const CONNECTION_URL = 'mongodb+srv://marloncoreas:8HNu4e4Th2HjhsT@cluster0.tqtrt.mongodb.net/test';
-//const CONNECTION_URL = process.env.CONNECTION_URL ? process.env.MONGODB_URI : 'mongodb://localhost/postmessages';
+app.get('/', (req, res) => {
+  res.send('Hello to Memories API');
+});
 
 const PORT = process.env.PORT || 5000;
 
